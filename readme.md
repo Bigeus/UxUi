@@ -1,5 +1,4 @@
-# - ETAPA 01:
-## Erros Encontrados no Código Java de Conexão com MySQL
+# Erros Encontrados no Código Java de Conexão com MySQL
 
 Este README resume os principais erros encontrados no código fornecido para a conexão com o banco de dados MySQL.
 
@@ -34,6 +33,3 @@ Este README resume os principais erros encontrados no código fornecido para a c
 ## 8. **Credenciais de Banco de Dados Codificadas**
    - **Problema**: As credenciais de banco de dados (usuário e senha) estão codificadas diretamente no código.
    - **Solução**: Use variáveis de ambiente ou arquivos de configuração para armazenar credenciais de maneira segura.
-
-
-# - ETAPA 02:
