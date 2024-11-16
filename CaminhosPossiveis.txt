@@ -1,0 +1,17 @@
+Caminhos possíveis no Fluxo:
+
+***Caminho 1 (Sucesso na autenticação):
+1 → 2 → 3 → 4 → 5 → 7 → 6 → 8 → 9 → 11 → 12 → 10
+Descrição: Segue o fluxo completo sem exceções, encontra o usuário no banco e retorna true
+
+***Caminho 2 (Falha na conexão BD):
+1 → 2 → 3 → 4 → 6 → 8 → 10
+Descrição: Falha ao tentar conectar com o banco de dados, caindo no primeiro catch e retornando false
+
+***Caminho 3 (Falha na execução da query):
+1 → 2 → 3 → 4 → 5 → 7 → 6 → 8 → 10
+Descrição: Consegue conectar ao banco, mas falha ao executar a query, caindo no segundo catch e retornando false
+
+***Caminho 4 (Usuário não encontrado):
+1 → 2 → 3 → 4 → 5 → 7 → 6 → 8 → 9 → 11 → 10
+Descrição: Executa todo o fluxo com sucesso, mas não encontra o usuário (rs.next() retorna false) e retorna false

@@ -37,3 +37,35 @@ Este README resume os principais erros encontrados no código fornecido para a c
 
 
 # - ETAPA 02:
+
+#### grafo de fluxo:
+[Abrir arquivo "Grafo de Fluxo"](./Grafo%20de%20Fluxo.pdf)
+
+### Cálculo Complexidade Ciclomática:
+#### V(G): Complexidade Ciclomática
+#### E: Número de Arestas
+#### N: Número de Nós
+
+V(G) = E - N + 2
+
+V(G) = 14 - 12 + 2
+
+V(G) = 4;
+
+## Caminhos possíveis:
+
+### Caminho 1 (Sucesso na autenticação):
+### 1 → 2 → 3 → 4 → 5 → 7 → 6 → 8 → 9 → 11 → 12 → 10
+Descrição: Segue o fluxo completo sem exceções, encontra o usuário no banco e retorna true
+
+### Caminho 2
+### 1 → 2 → 3 → 4 → 6 → 8 → 10
+Descrição: Falha ao tentar conectar com o banco de dados, caindo no primeiro catch e retornando false
+
+### Caminho 3
+### 1 → 2 → 3 → 4 → 5 → 7 → 6 → 8 → 10
+Descrição: Consegue conectar ao banco, mas falha ao executar a query, caindo no segundo catch e retornando false
+
+### Caminho 4
+### 1 → 2 → 3 → 4 → 5 → 7 → 6 → 8 → 9 → 11 → 10
+Descrição: Executa todo o fluxo com sucesso, mas não encontra o usuário (rs.next() retorna false) e retorna false
